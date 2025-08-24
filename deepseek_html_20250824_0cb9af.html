@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Pages Website Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 30px;
+        }
+        
+        .step {
+            display: flex;
+            gap: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .step:hover {
+            transform: translateY(-5px);
+        }
+        
+        .step-number {
+            background: #6a11cb;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .step-content h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .step-content p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .code {
+            background: #2c3e50;
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        
+        .screenshot {
+            background: #e0e0e0;
+            height: 200px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 0;
+            color: #777;
+            font-style: italic;
+        }
+        
+        .tip {
+            background: #e1f5fe;
+            border-left: 4px solid #0288d1;
+            padding: 10px 15px;
+            margin: 10px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step-number {
+                align-self: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>GitHub Pages Website Guide</h1>
+            <p>Step-by-step instructions to create and deploy your website</p>
+        </header>
+        
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h2>Create a New Repository</h2>
+                    <p>After logging into GitHub, click the "+" icon in the top right corner and select "New repository".</p>
+                    <div class="screenshot">[Screenshot: GitHub new repository button]</div>
+                    <div class="tip">The repository name must be in the format: username.github.io (replace username with your GitHub username)</div>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h2>Configure Repository Settings</h2>
+                    <p>Make sure to set your repository as Public (required for free GitHub Pages).</p>
+                    <div class="screenshot">[Screenshot: Repository visibility options]</div>
+                    <p>Initialize with a README file to make it easier to clone.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h2>Upload Your Website Files</h2>
+                    <p>Click the "Add file" button and select "Upload files".</p>
+                    <div class="screenshot">[Screenshot: Add file button on GitHub]</div>
+                    <p>Drag and drop your HTML, CSS, and JavaScript files or select them from your computer.</p>
+                    <div class="tip">Your main page must be named index.html for it to work properly</div>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h2>Enable GitHub Pages</h2>
+                    <p>Go to your repository Settings, then scroll down to the "GitHub Pages" section.</p>
+                    <div class="screenshot">[Screenshot: GitHub Pages settings location]</div>
+                    <p>Select the main branch as the source and click Save.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h2>Access Your Website</h2>
+                    <p>Your website will be available at https://username.github.io within 1-2 minutes.</p>
+                    <div class="code">https://yourusername.github.io</div>
+                    <div class="tip">You can also add a custom domain later in the GitHub Pages settings</div>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">6</div>
+                <div class="step-content">
+                    <h2>Update Your Website</h2>
+                    <p>To make changes, edit your files locally and upload them again, or use GitHub's web editor.</p>
+                    <div class="screenshot">[Screenshot: GitHub file edit interface]</div>
+                    <p>Changes will be live within a few minutes after uploading.</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Your website is now live! Share your URL with others to show off your work.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Simple animation for step numbers
+        document.addEventListener('DOMContentLoaded', function() {
+            const stepNumbers = document.querySelectorAll('.step-number');
+            
+            stepNumbers.forEach((number, index) => {
+                // Add animation delay based on index
+                number.style.animation = `pulse 2s ${index * 0.3}s infinite`;
+            });
+            
+            // Add keyframes for animation
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes pulse {
+                    0% { transform: scale(1); }
+                    50% { transform: scale(1.1); }
+                    100% { transform: scale(1); }
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>
